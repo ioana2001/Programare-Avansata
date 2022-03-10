@@ -4,7 +4,19 @@ public abstract class Room {
     String name;
     int size;
 
-    public Room() {}
+    public Room() {
+        name = randomRoomName();
+        size = (int)(Math.random() * 1000);
+    }
+
+    public static String randomRoomName() {
+        String name = "";
+        for(int i = 0; i < 3; i++) {
+            int n = (int) (Math.random() * 10);
+            name += (char) (n + '0');
+        }
+        return name;
+    }
 
     public Room(String name, int size) {
         this.name = name;

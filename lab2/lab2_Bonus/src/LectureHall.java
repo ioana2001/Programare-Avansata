@@ -1,6 +1,12 @@
+import java.util.Random;
 
 public class LectureHall extends Room {
     boolean videoProjector;
+
+    public LectureHall() {
+        Random rd = new Random();
+        this.videoProjector = rd.nextBoolean();
+    }
 
     public LectureHall(String name, int size, boolean videoProjector) {
         super(name, size);

@@ -1,5 +1,7 @@
 import java.sql.Time;
 import java.util.Objects;
+import java.util.Random;
+import java.sql.Time;
 
 public class Event {
     String name;
@@ -7,11 +9,39 @@ public class Event {
     Time start;
     Time end;
 
+    public Event() {
+        name = randomEventName();
+        size = (int) (Math.random() * 1000);
+
+        start = randomTime();
+        end = randomTime();
+        if (start.after(end)) {
+            Time aux = start;
+            start = end;
+            end = aux;
+        }
+    }
+
     public Event(String name, int size, Time start, Time end) {
         this.name = name;
         this.size = size;
         this.start = start;
         this.end = end;
+    }
+
+    public static Time randomTime() {
+        final Random random = new Random();
+        final int millisInDay = 24 * 60 * 60 * 1000;
+        Time time = new Time((long) random.nextInt(millisInDay));
+        return time;
+    }
+
+    public static String randomEventName() {
+        String name = "";
+        int n = (int) (Math.random() * 10);
+        name += (char) (n + 'A');
+        name += (char) (n + '0');
+        return name;
     }
 
     @Override

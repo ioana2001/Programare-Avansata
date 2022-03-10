@@ -2,6 +2,10 @@
 public class ComputerLab extends Room{
     String operatingSystem;
 
+    public ComputerLab() {
+        this.operatingSystem = "operatingSystem";
+    }
+
     public ComputerLab(String name, int size, String operatingSystem) {
         super(name, size);
         this.operatingSystem = operatingSystem;
