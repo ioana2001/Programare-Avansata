@@ -2,6 +2,8 @@ Bonus
 
 Class SolutionDSatur has a method colorDSatur that uses an algorithm for assigning each event a room. Each node represents an event and an edge between two nodes means that they are conflicting. After we color the graph we can consider each color a room and assign the events in rooms accordingly.
 
+Method testingTime from class Main is used for comparing the time between Greedy and DSatur. You can input the size of the instance you want to generate. 
+
 ----- problem text:
 
 Bonus (2p)
