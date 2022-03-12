@@ -1,4 +1,6 @@
 
+Classes Computer, Router and Switch extends Node. Each instance of these classes represent a node in a network.
+
 ----- Compulsory (1p)
 
 Create an object-oriented model of the problem. You should have at least the following classes Network, Node, Computer, Router, Switch. The natural ordering of the nodes is given by their names.
