@@ -1,4 +1,4 @@
-Homework (2p) \
+Homework (2p) 
 
 <ul>
 <li>Each node will contain a Map representing the time costs. Create and print the complete network in the example. </li>
