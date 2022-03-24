@@ -54,7 +54,6 @@ public class Main {
         mst.primMST();
 
         City randomCity = new City(5);
-        PrimMST randomCityMST = new PrimMST(randomCity);
 
         System.out.println("\nMinimum route for the random generated city: " + randomCity.getMinimumRoute());
     }
