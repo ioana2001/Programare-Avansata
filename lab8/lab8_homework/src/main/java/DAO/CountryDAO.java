@@ -14,16 +14,16 @@ public class CountryDAO {
     /**
      * @param name of the country
      * @param code of the country
-     * @param idc  of the continent
+     * @param continent  of the continent
      *             insert into table countries this country
      */
-    public void create(String name, String code, int idc) throws SQLException {
+    public void create(String name, String code, int continent) throws SQLException {
         Connection con = Database.getConnection();
         if (findByName(name) == null) {
-            try (PreparedStatement pstmt = con.prepareStatement("insert into countries (name,code,idc) values (?,?,?)")) {
+            try (PreparedStatement pstmt = con.prepareStatement("insert into countries (name,code,continent) values (?,?,?)")) {
                 pstmt.setString(1, name);
                 pstmt.setString(2, code);
-                pstmt.setInt(3, idc);
+                pstmt.setInt(3, continent);
                 pstmt.executeUpdate();
                 con.commit();
             }

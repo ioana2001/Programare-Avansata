@@ -8,9 +8,9 @@ import java.sql.SQLException;
  * class for connection to database from  postgres
  */
 public class Database {
-    private static final String URL = "jdbc:postgresql://localhost:5432/cities";
+    private static final String URL = "jdbc:postgresql://localhost:5432/homework8";
     private static final String USER = "postgres";
-    private static final String PASSWORD = "student";
+    private static final String PASSWORD = "admin";
     private static Connection connection;
 
     static {

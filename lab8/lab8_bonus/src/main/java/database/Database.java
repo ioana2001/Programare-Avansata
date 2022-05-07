@@ -12,9 +12,9 @@ public class Database {
 
     static {
         HikariConfig config = new HikariConfig();
-        config.setJdbcUrl("jdbc:postgresql://localhost:5432/bonus");
+        config.setJdbcUrl("jdbc:postgresql://localhost:5432/bonus8");
         config.setUsername("postgres");
-        config.setPassword("student");
+        config.setPassword("admin");
         config.addDataSourceProperty("minimumIdle", "5");
         config.addDataSourceProperty("maximumPoolSize", "25");
 

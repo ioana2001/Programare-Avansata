@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 public class Database {
     private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     private static final String URL =
-            "jdbc:postgresql://localhost:5432/postgres";
+            "jdbc:postgresql://localhost:5432/compulsory8";
     private static final String USER = "postgres";
     private static final String PASSWORD = "admin";
     private static Connection connection;
