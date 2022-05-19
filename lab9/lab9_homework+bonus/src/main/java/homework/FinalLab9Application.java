@@ -47,12 +47,12 @@ public class FinalLab9Application {
                 //System.out.println(continentsRepository.findByName("Europe"));
                 int romaniaId = countriesRepository.findByName("Romania").get(0).getId();
 
-//                final long startTime = System.nanoTime();
-//                for (int i = 0; i < 5000; i++) {
-//                    citiesRepository.saveAndFlush(new City("City " + i, false, 0.0, 0.0, 1000000, romaniaId));
-//                }
-//                final double duration = TimeUnit.SECONDS.convert(System.nanoTime() - startTime, TimeUnit.NANOSECONDS);
-//                System.out.println("Execution time of queries: " + duration);
+                final long startTime = System.nanoTime();
+                for (int i = 0; i < 5000; i++) {
+                    citiesRepository.saveAndFlush(new City("City " + i, false, 0.0, 0.0, 100, romaniaId));
+                }
+                final double duration = TimeUnit.SECONDS.convert(System.nanoTime() - startTime, TimeUnit.NANOSECONDS);
+                System.out.println("Execution time of queries: " + duration);
 
                 citiesRepository.saveAndFlush(new City("City1", false, 0.0, 0.0, 30, romaniaId));
                 citiesRepository.saveAndFlush(new City("City2", false, 0.0, 0.0, 40, romaniaId));
